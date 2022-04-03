@@ -18,7 +18,7 @@ public class AuditChange
         yield return Date;
     }
 
-    public override FluentValidation.IValidator GetValidator()
+    protected override FluentValidation.IValidator GetValidator()
     {
         return new eAcademy.Core.Domain.Validators.AuditChangeValidator();
     }

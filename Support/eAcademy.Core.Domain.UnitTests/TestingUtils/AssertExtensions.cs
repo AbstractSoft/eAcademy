@@ -1,6 +1,10 @@
 namespace eAcademy.Core.Domain.UnitTests.TestingUtils;
 
+#region
+
 using CoreConstants = eAcademy.Core.Domain.Helpers.Constants;
+
+#endregion
 
 [System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverageAttribute]
 public static class AssertExtensions

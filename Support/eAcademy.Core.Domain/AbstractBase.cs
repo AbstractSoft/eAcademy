@@ -27,5 +27,5 @@ public abstract class AbstractBase : eAcademy.Core.Domain.Validators.IValidateab
         return (AbstractBase)mapper.Map(this, GetType(), GetType());
     }
 
-    public abstract FluentValidation.IValidator GetValidator();
+    protected abstract FluentValidation.IValidator GetValidator();
 }

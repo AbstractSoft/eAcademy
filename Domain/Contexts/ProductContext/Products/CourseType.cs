@@ -1,4 +1,4 @@
-namespace eAcademy.Domain;
+namespace eAcademy.Domain.Contexts.ProductContext.Products;
 
 [Flags]
 public enum CourseType

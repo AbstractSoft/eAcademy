@@ -1,6 +1,10 @@
 namespace eAcademy.Core.Domain.UnitTests.Fakes.Entities;
 
+#region
+
 using CoreConstants = eAcademy.Core.Domain.Helpers.Constants;
+
+#endregion
 
 [System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverageAttribute]
 public class TestDomainEntityWithoutGetValidationRulesDescriptorMethodOverride
@@ -15,7 +19,7 @@ public class TestDomainEntityWithoutGetValidationRulesDescriptorMethodOverride
     public string StringProperty { get; set; }
     public CustomEntity CustomEntity { get; set; }
 
-    public override FluentValidation.IValidator GetValidator()
+    protected override FluentValidation.IValidator GetValidator()
     {
         return new eAcademy.Core.Domain.UnitTests.Fakes.Validators.
             TestDomainEntityWithoutGetValidationRulesDescriptorMethodOverrideValidator();

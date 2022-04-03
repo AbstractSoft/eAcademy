@@ -1,7 +1,5 @@
 ﻿namespace eAcademy.Core.Domain.UnitTests.Fakes.Validators;
 
-using DefaultValidatorExtensions = FluentValidation.DefaultValidatorExtensions;
-
 [System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverageAttribute]
 public class
     FakeEntity3EntityValidator
@@ -10,6 +8,6 @@ public class
 {
     public FakeEntity3EntityValidator()
     {
-        DefaultValidatorExtensions.NotEmpty(RuleFor(a => a.StringField));
+        FluentValidation.DefaultValidatorExtensions.NotEmpty(RuleFor(a => a.StringField));
     }
 }

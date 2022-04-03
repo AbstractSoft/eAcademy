@@ -19,7 +19,7 @@ public class CustomValueObject
         yield return ThingsEnumerable;
     }
 
-    public override FluentValidation.IValidator GetValidator()
+    protected override FluentValidation.IValidator GetValidator()
     {
         return new eAcademy.Core.Domain.UnitTests.Fakes.Validators.CustomerValueObjectValidator();
     }

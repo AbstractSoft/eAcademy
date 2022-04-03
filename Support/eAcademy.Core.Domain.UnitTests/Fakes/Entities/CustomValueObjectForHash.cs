@@ -19,7 +19,7 @@ public class CustomValueObjectForHash
         yield return Field2;
     }
 
-    public override FluentValidation.IValidator GetValidator()
+    protected override FluentValidation.IValidator GetValidator()
     {
         return null!;
     }

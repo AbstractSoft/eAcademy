@@ -45,7 +45,7 @@ public class FakeADAccount : eAcademy.Core.Domain.ValueObjects.ValueObject
         yield return Name;
     }
 
-    public override FluentValidation.IValidator GetValidator()
+    protected override FluentValidation.IValidator GetValidator()
     {
         return new eAcademy.Core.Domain.UnitTests.Fakes.Validators.FakeADAccountValidator();
     }

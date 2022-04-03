@@ -1,6 +1,10 @@
 ﻿namespace eAcademy.Core.Domain.UnitTests.Fakes.Entities;
 
+#region
+
 using CoreConstants = eAcademy.Core.Domain.Helpers.Constants;
+
+#endregion
 
 [System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverageAttribute]
 public class FakeEntity3 : eAcademy.Core.Domain.Entities.DomainEntity
@@ -21,7 +25,7 @@ public class FakeEntity3 : eAcademy.Core.Domain.Entities.DomainEntity
 
     public string StringField { get; set; }
 
-    public override FluentValidation.IValidator GetValidator()
+    protected override FluentValidation.IValidator GetValidator()
     {
         return new eAcademy.Core.Domain.UnitTests.Fakes.Validators.FakeEntity3EntityValidator();
     }

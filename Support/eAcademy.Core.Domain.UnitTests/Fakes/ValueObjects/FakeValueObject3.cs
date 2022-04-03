@@ -15,7 +15,7 @@ public class FakeValueObject3 : eAcademy.Core.Domain.ValueObjects.ValueObject
         yield return StringProperty;
     }
 
-    public override FluentValidation.IValidator GetValidator()
+    protected override FluentValidation.IValidator GetValidator()
     {
         return new eAcademy.Core.Domain.UnitTests.Fakes.Validators.FakeValueObject3Validator();
     }

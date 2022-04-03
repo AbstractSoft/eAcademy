@@ -23,16 +23,10 @@ public static class EnumHelper
                     .GetCustomAttributes(typeof(System.ComponentModel.DescriptionAttribute), false)) as
                 System.ComponentModel.DescriptionAttribute;
 
-            if (descriptionAttribute == null)
-            {
-                continue;
-            }
+            if (descriptionAttribute == null) continue;
 
             var descriptionValue = descriptionAttribute.Description;
-            if (string.Compare(value, descriptionValue, System.StringComparison.OrdinalIgnoreCase) == 0)
-            {
-                return (T)val;
-            }
+            if (string.Compare(value, descriptionValue, System.StringComparison.OrdinalIgnoreCase) == 0) return (T)val;
         }
 
         throw new System.ArgumentOutOfRangeException(null,

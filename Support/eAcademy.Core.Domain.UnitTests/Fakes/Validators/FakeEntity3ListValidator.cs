@@ -1,6 +1,10 @@
 ﻿namespace eAcademy.Core.Domain.UnitTests.Fakes.Validators;
 
-using FluentValidation;
+#region
+
+using DefaultValidatorExtensions = FluentValidation.DefaultValidatorExtensions;
+
+#endregion
 
 [System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverageAttribute]
 public class FakeEntity3ListValidator
@@ -10,8 +14,7 @@ public class FakeEntity3ListValidator
 {
     public FakeEntity3ListValidator()
     {
-        RuleFor(static list => list)
-            .NotEmpty();
+        DefaultValidatorExtensions.NotEmpty(RuleFor(static list => list));
 
         RuleForEach(static list => list)
             .SetValidator(new FakeEntity3EntityValidator());

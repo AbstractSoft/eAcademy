@@ -7,4 +7,8 @@
         <LangVersion>latestmajor</LangVersion>
     </PropertyGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\..\..\Support\eAcademy.Core.Domain\eAcademy.Core.Domain.csproj" />
+    </ItemGroup>
+
 </Project>

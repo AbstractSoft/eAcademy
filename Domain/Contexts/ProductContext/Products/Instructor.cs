@@ -1,6 +1,6 @@
-namespace eAcademy.Domain;
+namespace eAcademy.Domain.Contexts.ProductContext.Products;
 
-public class Instructor
+public class Instructor // ToDo: PersonContext
 {
     public string Name { get; set; }
     public string Description { get; set; }

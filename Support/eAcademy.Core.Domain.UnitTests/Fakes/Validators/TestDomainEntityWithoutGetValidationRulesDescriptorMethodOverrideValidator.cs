@@ -1,6 +1,10 @@
 ﻿namespace eAcademy.Core.Domain.UnitTests.Fakes.Validators;
 
-using FluentValidation;
+#region
+
+using DefaultValidatorExtensions = FluentValidation.DefaultValidatorExtensions;
+
+#endregion
 
 [System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverageAttribute]
 public class TestDomainEntityWithoutGetValidationRulesDescriptorMethodOverrideValidator
@@ -9,11 +13,9 @@ public class TestDomainEntityWithoutGetValidationRulesDescriptorMethodOverrideVa
 {
     public TestDomainEntityWithoutGetValidationRulesDescriptorMethodOverrideValidator()
     {
-        RuleFor(static x => x.StringProperty)
-            .NotEmpty()
-            .Length(3);
-        RuleFor(static x => x.CustomEntity)
-            .NotNull()
+        DefaultValidatorExtensions.Length(DefaultValidatorExtensions.NotEmpty(RuleFor(static x => x.StringProperty)),
+            3);
+        DefaultValidatorExtensions.NotNull(RuleFor(static x => x.CustomEntity))
             .SetValidator(new CustomEntityValidator());
     }
 }

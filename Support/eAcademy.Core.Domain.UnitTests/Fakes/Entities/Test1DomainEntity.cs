@@ -1,6 +1,10 @@
 ﻿namespace eAcademy.Core.Domain.UnitTests.Fakes.Entities;
 
+#region
+
 using CoreConstants = eAcademy.Core.Domain.Helpers.Constants;
+
+#endregion
 
 [System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverageAttribute]
 public class Test1DomainEntity : eAcademy.Core.Domain.Entities.DomainEntity
@@ -56,7 +60,7 @@ public class Test1DomainEntity : eAcademy.Core.Domain.Entities.DomainEntity
         });
     }
 
-    public override FluentValidation.IValidator GetValidator()
+    protected override FluentValidation.IValidator GetValidator()
     {
         return new eAcademy.Core.Domain.UnitTests.Fakes.Validators.Test1DomainEntityValidator();
     }

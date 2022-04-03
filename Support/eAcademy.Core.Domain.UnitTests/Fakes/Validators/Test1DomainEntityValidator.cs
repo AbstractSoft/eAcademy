@@ -1,6 +1,10 @@
 ﻿namespace eAcademy.Core.Domain.UnitTests.Fakes.Validators;
 
-using FluentValidation;
+#region
+
+using DefaultValidatorExtensions = FluentValidation.DefaultValidatorExtensions;
+
+#endregion
 
 [System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverageAttribute]
 public class
@@ -9,7 +13,6 @@ public class
 {
     public Test1DomainEntityValidator()
     {
-        RuleFor(static x => x.StringProperty)
-            .NotEmpty();
+        DefaultValidatorExtensions.NotEmpty(RuleFor(static x => x.StringProperty));
     }
 }
